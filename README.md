@@ -1,8 +1,8 @@
-#Rest APIs
+# Rest APIs
 
-##Installation
+## Installation
 pip install flask
 
-##Implementation
+## Implementation
 This flask rest api stores data in sqlite database and uses sqlalchemy.
 Has CRUD operations and foreign key relations.
