@@ -12,7 +12,9 @@ app=Flask(__name__)
 api=Api(app)
 app.secret_key = 'goyala'
 
-app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL','sqlite:///data.db')
+#app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL','sqlite:///data.db')
+#Changing for heroku, on local run the above one it will automatically pickup sqlite
+app.config['SQLALCHEMY_DATABASE_URI']="postgresql://akuotlbooxyuky:d477e6a0f673511b3f62f2fb727a75516af4bdf1c04bc755e17d8a9f84e4222c@ec2-54-73-68-39.eu-west-1.compute.amazonaws.com:5432/d45ung1br13j7t"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 
 @app.before_first_request
